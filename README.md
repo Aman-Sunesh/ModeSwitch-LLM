@@ -477,3 +477,13 @@ Current limitations include:
 ## Summary
 
 ModeSwitch-LLM shows that simple request-aware routing can recover substantial inference efficiency on a single GPU. The main result is not that one optimization always wins, but that different request families benefit from different modes. A lightweight request-boundary controller can exploit this structure with almost no routing overhead, achieving strong latency and energy gains while preserving benchmark quality close to FP16.
+
+---
+
+## License
+
+Copyright 2026 ModeSwitch-LLM contributors.
+
+This project is released under the Apache License 2.0. See [LICENSE](LICENSE) for details.
+
+---
