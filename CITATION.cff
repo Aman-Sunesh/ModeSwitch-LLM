@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+title: "ModeSwitch-LLM: A Lightweight Phase-Aware Controller for Cross-Mode LLM Inference on a Single GPU"
+message: "If you use this code or results, please cite this work."
+type: software
+authors:
+  - family-names: Sunesh
+    given-names: Aman
+    orcid: "https://orcid.org/0009-0007-5654-1737"
+  - family-names: Alshehhi
+    given-names: Ali
+  - family-names: Dhakne
+    given-names: Hivansh
+repository-code: "https://github.com/ModeSwitch-LLM/ModeSwitch-LLM"
+date-released: "2026-05-21"
