@@ -1,10 +1,14 @@
 # ModeSwitch-LLM
 
+[![arXiv](https://img.shields.io/badge/arXiv-2605.23057-b31b1b.svg)](https://arxiv.org/abs/2605.23057)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20334250-blue.svg)](https://doi.org/10.5281/zenodo.20334250)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+
 **A lightweight phase-aware controller for cross-mode LLM inference on a single GPU.**
 
 ModeSwitch-LLM is a benchmark-driven LLM serving project that routes each incoming request to a suitable fixed inference mode before generation begins. Instead of serving every request with one static FP16 configuration, the system uses cheap request-level features such as prompt length, expected output length, shared-prefix status, memory pressure, batch pressure, and workload/benchmark family to choose among optimized inference modes such as GPTQ 4-bit, INT8 quantization, speculative decoding, prefix caching, and hybrid configurations.
 
-The project was developed for **ECE-GY 9483 / CSCI-GA.3033: Efficient AI and Hardware Accelerator Design** and evaluated on a **single NVIDIA A100 40 GB GPU** using **Meta-Llama-3.1-8B-Instruct** served through **vLLM**.
+The associated preprint is available on arXiv as [arXiv:2605.23057](https://arxiv.org/abs/2605.23057), and the archived software release is available on Zenodo at [10.5281/zenodo.20334250](https://doi.org/10.5281/zenodo.20334250). The system was evaluated on a **single NVIDIA A100 40 GB GPU** using **Meta-Llama-3.1-8B-Instruct** served through **vLLM**.
 
 ---
 
@@ -478,6 +482,36 @@ Current limitations include:
 
 ModeSwitch-LLM shows that simple request-aware routing can recover substantial inference efficiency on a single GPU. The main result is not that one optimization always wins, but that different request families benefit from different modes. A lightweight request-boundary controller can exploit this structure with almost no routing overhead, achieving strong latency and energy gains while preserving benchmark quality close to FP16.
 
+---
+
+## Citation
+
+If you use ModeSwitch-LLM or build on this work, please cite the paper:
+
+```bibtex
+@article{sunesh2026modeswitchllm,
+  title={ModeSwitch-LLM: A Lightweight Phase-Aware Controller for Cross-Mode LLM Inference on a Single GPU},
+  author={Sunesh, Aman and Alshehhi, Ali and Dhakne, Hivansh},
+  journal={arXiv preprint arXiv:2605.23057},
+  year={2026},
+  doi={10.48550/arXiv.2605.23057},
+  url={https://arxiv.org/abs/2605.23057}
+}
+```
+
+For the archived software release, cite:
+
+```bibtex
+@software{sunesh2026modeswitchllm_software,
+  author={Sunesh, Aman and Alshehhi, Ali and Dhakne, Hivansh},
+  title={ModeSwitch-LLM: A Lightweight Phase-Aware Controller for Cross-Mode LLM Inference on a Single GPU},
+  year={2026},
+  publisher={Zenodo},
+  version={v0.1.0-arxiv},
+  doi={10.5281/zenodo.20334250},
+  url={https://doi.org/10.5281/zenodo.20334250}
+}
+```
 ---
 
 ## License
