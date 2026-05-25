@@ -1,7 +1,7 @@
 # ModeSwitch-LLM
 
 [![arXiv](https://img.shields.io/badge/arXiv-2605.23057-b31b1b.svg)](https://arxiv.org/abs/2605.23057)
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20334250-blue.svg)](https://doi.org/10.5281/zenodo.20334250)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20334249-blue.svg)](https://doi.org/10.5281/zenodo.20334249)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
 **A lightweight phase-aware controller for cross-mode LLM inference on a single GPU.**
